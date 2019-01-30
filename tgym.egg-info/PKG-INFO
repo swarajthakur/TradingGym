@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: tgym
+Version: 0.1.15
+Summary: Trading Gym is an open-source project for the development of reinforcement learning algorithms in the context of trading.
+Home-page: https://github.com/prediction-machines/tgym
+Author: Prediction Machines
+Author-email: tgym@prediction-machines.com
+License: MIT license
+Description: UNKNOWN
+Keywords: tgym
+Platform: UNKNOWN

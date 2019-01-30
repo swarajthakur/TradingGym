@@ -6,12 +6,16 @@ Do not hesitate to run several times and/or tweak parameters to get better resul
 Inspired from https://github.com/keon/deep-q-learning
 """
 import random
-import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use("TkAgg")
+from matplotlib import pyplot as plt
 import numpy as np
 import time
 from keras.layers import Dense
 from keras.models import Sequential
 from keras.optimizers import Adam
+import sys
+sys.path.append(r'/Users/swt02/workspaces/python/datascience/TradingGym')
 from tgym.envs.trading_spread import SpreadTrading
 from tgym.gens.deterministic import WavySignal, RandomGenerator
 from tgym.gens.csvstream import CSVStreamer
@@ -122,10 +126,10 @@ if __name__ == "__main__":
         generator = RandomGenerator(
             spread=0.0001, range_low=1.0, range_high=2.0)
     elif gen_type == 'C':
-        filename = r'./examples/price_usdeur.csv'
-        generator = CSVStreamer(filename=filename)
+        filename = r'/Users/swt02/workspaces/python/datascience/TradingGym/examples/EURUSD15_CSV.csv'
+        generator = CSVStreamer(filename=filename,header=True)
 
-    episodes = 50
+    episodes = 10
     episode_length = 2000
     trading_fee = .2
     time_fee = 0
